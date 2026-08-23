@@ -1,0 +1,66 @@
+generated: '2026-08-23'
+method: searched
+source: https://pypi.org/pypi/monkeybread/json + https://api.github.com/orgs/immunitastx/repos
+note: >-
+  Immunitas Therapeutics publishes no API and therefore ships no API client SDK. It does publish
+  first-party OPEN SOURCE RESEARCH TOOLING from the immunitastx GitHub organization. Only one of
+  those repositories is distributed through a public package registry (PyPI). These are scientific
+  analysis libraries, not client libraries for an Immunitas API, so no `SDKs` pointer is emitted in
+  apis.yml — doing so would credit the company with an SDK for an API it does not operate.
+registries_checked:
+- registry: pypi
+  queries: [monkeybread, recover-counts, recover_counts, immunitas]
+  hits: 1
+- registry: npm
+  queries: [immunitas, immunitastx]
+  hits: 0
+packages:
+- language: python
+  registry: pypi
+  name: monkeybread
+  url: https://pypi.org/project/monkeybread/
+  install: pip install monkeybread
+  official: true
+  version: 1.0.3
+  published: '2023-08-23'
+  license: MIT
+  summary: Analyze cellular niches in single-cell spatial transcriptomics data
+  source: https://github.com/immunitastx/monkeybread
+  docs: https://monkeybread.readthedocs.io/
+  note: >-
+    MIT licensed, "Copyright (c) 2022, Immunitas Therapeutics" — unambiguously first-party. Latest
+    PyPI release 1.0.3 (2023-08-23); the repository is not archived but its last commit is
+    2024-11-18, so the published distribution is about three years stale as of this pass.
+unreleased_source_only:
+- name: recover-counts
+  url: https://github.com/immunitastx/recover-counts
+  language: python
+  registry: null
+  version: null
+  published: null
+  note: >-
+    Source-only on GitHub; checked PyPI for both `recover-counts` and `recover_counts`, HTTP 404 on
+    each — no registry distribution exists, so there is no version metadata to record.
+- name: monkeybread-case-study
+  url: https://github.com/immunitastx/monkeybread-case-study
+  language: jupyter-notebook
+  registry: null
+  version: null
+  published: null
+  note: Notebook case study applying monkeybread to a human melanoma tumor dataset; not a package.
+- name: NSCLS-PIC
+  url: https://github.com/immunitastx/NSCLS-PIC
+  language: r
+  registry: null
+  version: null
+  published: null
+  note: >-
+    PIC-seq algorithm code and metadata for Cohen M. & Giladi A. et al., Nature Cancer 2022. Not
+    published to CRAN or Bioconductor; source-only.
+- name: terra-docker
+  url: https://github.com/immunitastx/terra-docker
+  language: jupyter-notebook
+  registry: null
+  version: null
+  published: null
+  note: Fork/derivative of Terra notebook Docker images; no registry distribution found.

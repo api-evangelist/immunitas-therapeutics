@@ -1,0 +1,72 @@
+generated: '2026-08-23'
+method: probed
+source: live GET of /.well-known/* on the company's only public host
+hit_count: 0
+note: >-
+  Every /.well-known/ path probed on www.immunitastx.com returned an HTTP 404. These are honest
+  404 status codes, not the soft-200 catch-all pattern — the Squarespace origin returns the full
+  marketing-site HTML body but with a 404 status, and /.well-known/security.txt returns a distinct
+  JSON 404 ({"message":"security.txt not found"}). Nothing was fetched, nothing was saved, and NO
+  WellKnown or SecurityTxt pointer is emitted in apis.yml: this file records an absence.
+hosts:
+- host: https://www.immunitastx.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+soft_404_control:
+  probed: https://www.immunitastx.com/.well-known/api-catalog
+  status: 404
+  content_type: text/html;charset=utf-8
+  bytes: 882093
+  verdict: >-
+    Origin serves the site shell on unknown paths but with a correct 404 status, so status codes
+    from this host are trustworthy.
+contract_discovery:
+  note: >-
+    STEP 0b run in full against the only host this company controls. apis.yml carries no apis[]
+    entries, so there is no baseURL host and no OpenAPI servers[] host to probe beyond it.
+  probes:
+  - url: https://www.immunitastx.com/openapi.json
+    status: 404
+  - url: https://www.immunitastx.com/openapi.yaml
+    status: 404
+  - url: https://www.immunitastx.com/swagger.json
+    status: 404
+  - url: https://www.immunitastx.com/api-docs
+    status: 404
+  - url: https://www.immunitastx.com/llms.txt
+    status: 404
+  - url: https://www.immunitastx.com/robots.txt
+    status: 200
+    note: >-
+      Stock Squarespace robots.txt. Disallows /api/ (the Squarespace platform's own internal
+      endpoints, not an Immunitas API) and publishes a sitemap.
+  - url: https://www.immunitastx.com/sitemap.xml
+    status: 200
+    note: >-
+      Four URLs total — /home, /privacy-policy, /terms-and-conditions, /rdday. There is no
+      developer, docs, API or integrations page anywhere in the site's own index.
+  graphql: not-applicable
+  mcp: not-applicable
+  a2a: miss
+  grpc: not-found
+  wsdl: not-found
