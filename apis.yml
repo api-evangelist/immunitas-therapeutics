@@ -12,6 +12,18 @@ description: >-
   machine-readable API contract. Its only public software is open source research tooling from the
   immunitastx GitHub organization, notably the MIT-licensed Python package monkeybread for
   analyzing cellular niches in single-cell spatial transcriptomics data.
+deliveryModel:
+  model: unknown
+  open_source: unknown
+  commercial: true
+  callable_host: false
+  label: Delivery model not determined — needs a product licence on record
+  confidence: low
+  source:
+  - pricing
+  - repository-unlicensed
+  generated: '2026-08-28'
+  method: derived
 image: https://static1.squarespace.com/static/6164da62fcac550608373bab/t/6182f75661dfa17d0caa4ec2/1635972950201/immunitas_logo.png?format=1500w
 url: https://raw.githubusercontent.com/api-evangelist/immunitas-therapeutics/refs/heads/main/apis.yml
 x-type: company
