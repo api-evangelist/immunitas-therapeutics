@@ -64,6 +64,9 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: License
+  name: MIT
+  url: https://github.com/immunitastx/monkeybread/blob/main/LICENSE
 - type: Website
   url: https://www.immunitastx.com/
 - type: PrivacyPolicy
