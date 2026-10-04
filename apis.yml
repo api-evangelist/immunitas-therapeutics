@@ -55,7 +55,7 @@ tags:
 - Single Cell Analysis
 - Spatial Transcriptomics
 - Bioinformatics
-- Open-Source
+- Open Source
 - Life Sciences
 tags_raw:
 - Company
@@ -69,6 +69,7 @@ tags_raw:
 - Bioinformatics
 - Open Source
 - Life Sciences
+- Open-Source
 apis: []
 maintainers:
 - FN: Kin Lane
